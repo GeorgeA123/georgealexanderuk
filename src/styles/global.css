@@ -14,7 +14,7 @@
 
 @font-face {
     font-family: 'ABC Oracle';
-    src: url('/fonts/ABCOracle-Bold-Trial.otf') format('opentype');
+    src: url('../../public/fonts/ABCOracle-Bold-Trial.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -22,7 +22,7 @@
 
 @font-face {
     font-family: 'ABC Oracle Regular';
-    src: url('/fonts/ABCOracle-Regular-Trial.otf') format('opentype');
+    src: url('../../public/fonts/ABCOracle-Regular-Trial.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -30,6 +30,10 @@
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {

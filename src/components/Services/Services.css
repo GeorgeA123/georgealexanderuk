@@ -1,0 +1,125 @@
+.services {
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: #F5F1ED;
+    padding: 8rem 30px 4rem;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    margin-top: 0;
+}
+
+.services__container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services__header {
+    margin-bottom: 4rem;
+}
+
+.services__title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem 0;
+    color: #F5F1ED;
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+}
+
+.services__subtitle {
+    font-size: 1rem;
+    color: #999;
+    margin: 0 0 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: var(--font-body);
+}
+
+.services__intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #D4CFC7;
+    max-width: 800px;
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+.services__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.service {
+    border-top: 1px solid #444;
+    padding-top: 2rem;
+}
+
+.service__header {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service__number {
+    font-size: 1rem;
+    color: #999;
+    font-family: var(--font-body);
+}
+
+.service__title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin: 0;
+    color: #F5F1ED;
+    font-family: var(--font-body);
+}
+
+.service__description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #B8B3AB;
+    margin: 0 0 1.5rem 0;
+    max-width: 900px;
+    font-family: var(--font-body);
+}
+
+.service__technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.service__tech {
+    font-size: 0.9rem;
+    color: #999;
+    font-family: var(--font-body);
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 6rem 20px 3rem;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .services__header {
+        margin-bottom: 3rem;
+    }
+
+    .services__intro {
+        font-size: 1rem;
+    }
+
+    .service__header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .services__list {
+        gap: 2.5rem;
+    }
+}
