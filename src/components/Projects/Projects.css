@@ -72,13 +72,13 @@
 .project-card__content {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.5rem;
     order: 1;
 }
 
 .project-card__image-wrapper {
     width: 100%;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1 / 1;
     border-radius: 20px;
     overflow: hidden;
     background: #0a0a0a;
@@ -133,6 +133,14 @@
     font-family: var(--font-primary);
 }
 
+.project-card__description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #D4CFC7;
+    margin: 0;
+    font-family: var(--font-body);
+}
+
 @media (max-width: 968px) {
     .project-card {
         grid-template-columns: 1fr;
@@ -166,7 +174,7 @@
     }
 
     .project-card__image-wrapper {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 1 / 1;
     }
 
     .project-card__title {

@@ -4,11 +4,11 @@ import './Projects.css'
 const defaultProjects: Project[] = [
     {
         id: 'newspaper-game',
-        title: 'Newspaper Game',
+        title: 'Guess What Paper',
         subtitle: 'Interactive Web Application',
-        description: 'A full-stack web application built with modern technologies, featuring real-time interactions and a polished user experience.',
-        image: 'https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?w=800&h=600&fit=crop',
-        link: 'https://newspapergame.georgealexander.uk',
+        description: 'Read the headline. Guess which newspaper published it. Test your ability to spot media bias and writing styles.',
+        image: '/images/projects/guess-what-paper.gif',
+        link: 'https://guesswhatpaper.georgealexander.uk/',
         tags: ['DEVELOPMENT', 'FULL-STACK'],
         year: '2025'
     }
@@ -38,29 +38,28 @@ const Projects = ({
                         rel="noopener noreferrer"
                         className="project-card"
                         >
-                        <div className="project-card__image-wrapper">
-                        <img
-                        src={project.image}
-                        alt={project.title}
-                        className="project-card__image"
-                        />
-                        </div>
-                        <p className="project-card__subtitle">{project.subtitle}</p>
-                        <h3 className="project-card__title">{project.title}</h3>
                         <div className="project-card__content">
-                        <div className="project-card__tags">
-                    {project.tags.map((tag, index) => (
-                        <span key={index} className="project-card__tag">
-                    {tag}
-                </span>
-                ))}
-                <span className="project-card__tag project-card__tag--year">
-                    {project.year}
-                  </span>
-            </div>
-
-
-        </div>
+                            <p className="project-card__subtitle">{project.subtitle}</p>
+                            <h3 className="project-card__title">{project.title}</h3>
+                            <p className="project-card__description">{project.description}</p>
+                            <div className="project-card__tags">
+                                {project.tags.map((tag, index) => (
+                                    <span key={index} className="project-card__tag">
+                                        {tag}
+                                    </span>
+                                ))}
+                                <span className="project-card__tag project-card__tag--year">
+                                    {project.year}
+                                </span>
+                            </div>
+                        </div>
+                        <div className="project-card__image-wrapper">
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="project-card__image"
+                            />
+                        </div>
 </a>
 ))}
 </div>
