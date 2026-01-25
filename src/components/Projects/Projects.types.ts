@@ -4,9 +4,10 @@ export interface Project {
     subtitle: string
     description: string
     image: string
-    link: string
+    link?: string
     tags: string[]
     year: string
+    githubLink?: string
 }
 
 export interface ProjectsProps {

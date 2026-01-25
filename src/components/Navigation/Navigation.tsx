@@ -3,10 +3,10 @@ import type { NavigationProps, NavigationItem } from './Navigation.types'
 import './Navigation.css'
 
 const defaultNavItems: NavigationItem[] = [
-    { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
-    { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
+    { label: 'GitHub', href: 'https://github.com/GeorgeA123', external: true },
 ]
 
 const Navigation = ({ items = defaultNavItems }: NavigationProps) => {
@@ -31,12 +31,16 @@ const Navigation = ({ items = defaultNavItems }: NavigationProps) => {
         >
             <div className="navigation__container">
         <span className="navigation__brand">
-          Full Stack Engineer
+          Lead Software Engineer
         </span>
                 <ul className="navigation__menu">
                     {items.map((item) => (
                         <li key={item.href} className="navigation__item">
-                            <a href={item.href} className="navigation__link">
+                            <a
+                                href={item.href}
+                                className="navigation__link"
+                                {...(item.external && { target: '_blank', rel: 'noopener noreferrer' })}
+                            >
                                 {item.label}
                             </a>
                         </li>
