@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a React-based portfolio website for George Alexander, built with Vite, TypeScript, and Bun as the runtime. The project uses a component-based architecture with a custom theme system and CSS modules for styling.
+This is a React-based portfolio website for George Alexander, built with Vite, TypeScript, and Bun as the runtime. The project uses a component-based architecture with a custom theme system. Deployed to Cloudflare Pages via GitHub Actions on push to `main`.
 
 ## Development Commands
 
@@ -43,10 +43,13 @@ The project uses a centralized theme system:
 - No emit mode (bundler handles compilation)
 
 ### Styling Approach
-- CSS custom properties for theme values
-- Component-specific CSS files with BEM-like naming
+- CSS custom properties for theme values (not CSS modules)
+- Component-specific CSS files with BEM-like naming (e.g., `.hero__container`, `.hero__cta-icon`)
 - Global styles in `src/styles/global.css`
-- Custom font loading from `/public/fonts/`
+- Custom font: ABC Oracle loaded from `/public/fonts/`
+
+### Custom Hooks
+- `useScrollDirection` - Returns scroll direction ('up'/'down') and scrollY position for scroll-based UI (e.g., hiding/showing navigation)
 
 ## Key Technologies
 

@@ -4,28 +4,28 @@ import './Services.css'
 const defaultServices: Service[] = [
     {
         number: '01',
-        title: 'Full-Stack Development',
-        description: 'Building end-to-end web applications from database design to user interfaces. I work across the entire stack to create cohesive solutions that are performant, maintainable, and built to scale with your needs.',
-        technologies: ['React, TypeScript, Modern JS', 'C#, ASP.NET Core, .NET']
+        title: '.NET Backend Development',
+        description: 'Building robust, scalable backend systems with C# and .NET. I design and implement RESTful APIs using ASP.NET Core, applying patterns like CQRS and MediatR to create maintainable, testable codebases that handle complex business logic.',
+        technologies: ['C#, ASP.NET Core, Entity Framework Core', '.NET Core, MediatR, REST APIs']
     },
     {
         number: '02',
-        title: 'Backend & API Development',
-        description: 'Designing and implementing robust server-side architectures and RESTful APIs. I focus on writing clean, efficient code that handles data securely and integrates seamlessly with frontend applications.',
-        technologies: ['ASP.NET Core Web APIs', 'PostgreSQL Database Design', 'Azure Cloud Services']
+        title: 'System Architecture & Design',
+        description: 'Designing layered architectures that separate concerns and scale with your organisation. I select and adapt patterns based on the problem at hand, documenting decisions via ADRs and establishing standards that teams can follow consistently.',
+        technologies: ['CQRS, Domain Driven Design', 'Vertical Slice Architecture', 'Clean Architecture Patterns']
     },
     {
         number: '03',
-        title: 'Cloud & Infrastructure',
-        description: 'Deploying and managing applications on cloud platforms with a focus on reliability and cost-effectiveness. I work with modern DevOps practices to ensure smooth deployments and monitoring.',
-        technologies: ['Azure App Services', 'CI/CD Pipelines', 'Database Management']
+        title: 'Azure Cloud Services',
+        description: 'Deploying and integrating cloud-native solutions on Azure. From serverless functions to message-driven architectures, I build systems that leverage Azure services for reliability, scalability, and cost-effectiveness.',
+        technologies: ['Azure Functions, Service Bus', 'PostgreSQL, CosmosDB, Oracle', 'Entra Authentication, Terraform']
     }
 ]
 
 const Services = ({
                       title = 'WHAT I DO',
-                      subtitle = '(SERVICES)',
-                      intro = 'I build full-stack web applications with a focus on creating solutions that work reliably in production. From designing databases to crafting user interfaces, I handle the complete development process to deliver applications that meet real business needs.',
+                      subtitle = '(EXPERTISE)',
+                      intro = 'I specialise in .NET backend development, building the server-side systems that power complex applications. From designing clean architectures to implementing cloud-native solutions on Azure, I focus on creating backend systems that are reliable, maintainable, and built to scale.',
                       services = defaultServices
                   }: ServicesProps) => {
     return (

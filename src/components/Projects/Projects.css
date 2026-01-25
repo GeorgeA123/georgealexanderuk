@@ -55,14 +55,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
 }
 
 .project-card:hover .project-card__image {
@@ -73,7 +66,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    order: 1;
 }
 
 .project-card__image-wrapper {
@@ -82,7 +74,23 @@
     border-radius: 20px;
     overflow: hidden;
     background: #0a0a0a;
+}
+
+/* Alternate layout: odd items have image on right, even items have image on left */
+.project-card:nth-child(odd) .project-card__content {
+    order: 1;
+}
+
+.project-card:nth-child(odd) .project-card__image-wrapper {
     order: 2;
+}
+
+.project-card:nth-child(even) .project-card__content {
+    order: 2;
+}
+
+.project-card:nth-child(even) .project-card__image-wrapper {
+    order: 1;
 }
 
 .project-card__image {
@@ -141,17 +149,61 @@
     font-family: var(--font-body);
 }
 
+.project-card__links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.project-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #F5F1ED;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #F5F1ED;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    font-family: var(--font-body);
+}
+
+.project-card__link:hover {
+    background: #F5F1ED;
+    color: #1a1a1a;
+}
+
+.project-card__link--github {
+    border-color: #999;
+    color: #999;
+}
+
+.project-card__link--github:hover {
+    background: #999;
+    color: #1a1a1a;
+}
+
+.project-card__link-icon {
+    font-size: 0.85rem;
+}
+
 @media (max-width: 968px) {
     .project-card {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .project-card__content {
+    /* Reset alternating layout on mobile - image always on top */
+    .project-card:nth-child(odd) .project-card__content,
+    .project-card:nth-child(even) .project-card__content {
         order: 2;
     }
 
-    .project-card__image-wrapper {
+    .project-card:nth-child(odd) .project-card__image-wrapper,
+    .project-card:nth-child(even) .project-card__image-wrapper {
         order: 1;
     }
 }
